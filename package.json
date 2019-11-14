@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "to-then",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Convert any type of promise to a then promise.",
+    "repository": "https://github.com/Richienb/to-then.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,18 +11,28 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "then",
+        "promise"
+    ],
+    "dependencies": {
+        "convert-promise": "^1.0.1"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint-config-richienb": "^0.2.2",
+        "p-is-promise": "^3.0.0",
+        "promise": "^8.0.3",
         "xo": "^0.25.3"
+    },
+    "peerDependencies": {
+        "promise": "*"
     },
     "resolutions": {
         "eslint": "^6.6.0"

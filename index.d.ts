@@ -1,14 +1,16 @@
+import ThenPromise from "promise"
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Convert a promise to use https://github.com/then/promise.
+ * @param promise The promise to convert.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const toThen = require("to-then");
+ *
+ * const es6Promise = new Promise(resolve => resolve("Hello World!")); // Regular native promise.
+ * const thenPromise = toThen(es6Promise); // Then promise.
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function toThen<T>(promise: PromiseLike<T>): ThenPromise<T>;
 
-export = theModule;
+export = toThen;

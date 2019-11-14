@@ -1,41 +1,30 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# To Then [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/to-then/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/to-then)
 
-My awesome module.
+Convert any type of promise to a then promise
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/to-then.png)](https://npmjs.com/package/to-then)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install to-then promise
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const toThen = require("to-then");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+const es6Promise = new Promise(resolve => resolve("Hello World!")); // Regular native promise.
+const thenPromise = toThen(es6Promise); // Then promise.
 ```
 
 ## API
 
-### theModule(input, options?)
+### toThen(promise)
 
-#### input
+#### promise
 
-Type: `string`
+Type: `PromiseLike`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The promise to convert.

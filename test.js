@@ -1,13 +1,11 @@
 import test from "ava"
-import theModule from "."
+import isPromise from "p-is-promise"
+import toThen from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
+    const es6Promise = new Promise((resolve) => resolve("Hello World!")) // Regular native promise.
+    t.true(isPromise(es6Promise))
 
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    const thenPromise = toThen(es6Promise) // Then promise.
+    t.true(isPromise(thenPromise))
 })
