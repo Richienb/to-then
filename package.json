@@ -29,7 +29,7 @@
         "eslint-config-richienb": "^0.2.2",
         "p-is-promise": "^3.0.0",
         "promise": "^8.0.3",
-        "xo": "^0.25.3"
+        "xo": "^0.28.0"
     },
     "peerDependencies": {
         "promise": "*"
